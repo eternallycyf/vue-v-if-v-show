@@ -1,0 +1,48 @@
+<style>
+  .box-wrapper {
+    width: 800px;
+    height: 200px;
+  }
+
+  .box {
+    float: left;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+  }
+
+  .box1 {
+    background-color: pink;
+  }
+
+  .box2 {
+    background-color: skyblue;
+  }
+
+  .box3 {
+    background-color: cornflowerblue;
+  }
+
+  .box4 {
+    background-color: mediumvioletred;
+  }
+</style>
+<body>
+  <div id="app">
+    <div class="box-wrapper">
+      <div class="box box1" v-if='boxShow1'>1</div>
+      <div class="box box2" v-show='boxShow2'>2</div>
+      <div class="box box3" v-if='boxShow3'>3</div>
+      <div class="box box4" v-show='boxShow4'>4</div>
+    </div>
+
+    <button @click='showBox1'>1</button>
+    <button @click='showBox2'>2</button>
+    <button @click='showBox3'>3</button>
+    <button @click='showBox4'>4</button>
+  </div>
+  <script type="module" src="./index.js"></script>
+</body>
